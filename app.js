@@ -29,7 +29,7 @@ const dbUrl = process.env.DB_URL || 'mongodb://localhost:27017/yelpcamp';
 
 //'mongodb://localhost:27017/yelpcamp'
 
-mongoose.connect('mongodb://localhost:27017/yelpcamp', {
+mongoose.connect(dbUrl, {
     useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true,
@@ -121,7 +121,7 @@ app.use(
                 "'self'",
                 "blob:",
                 "data:",
-                "https://res.cloudinary.com/mindflayer/", //SHOULD MATCH YOUR CLOUDINARY ACCOUNT! 
+                "https://res.cloudinary.com/yatnesh14/", //SHOULD MATCH YOUR CLOUDINARY ACCOUNT! 
                 "https://images.unsplash.com/",
             ],
             fontSrc: ["'self'", ...fontSrcUrls],
